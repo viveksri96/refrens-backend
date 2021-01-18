@@ -17,13 +17,11 @@ app.use(Cors());
 
 app.get("/search", async (request, response) => {
   try {
-    const collection = client.db("test-refrens").collection("user");
+    const collection = client.db("refrens").collection("user");
     let result = await collection
       .aggregate([
         {
           $search: {
-            index: "highlight-test",
-            index: "highlight-test",
             compound: {
               should: [
                 {
