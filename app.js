@@ -49,7 +49,7 @@ app.get("/search", async (request, response) => {
                   },
                 },
                 {
-                  autocomplete: {
+                  text: {
                     query: `${request.query.query}`,
                     path: "items",
                   },
